@@ -1,0 +1,2179 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> 🌸 The Lizeth Store</title>
+
+    <meta name="description" content="The Lizeth Store - Joyas y fragancias seleccionadas con amor.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* =========================
+       VARIABLES
+    ========================= */
+
+        :root {
+            --rosa: #d9a7b3;
+            --rosa-claro: #f4e4e7;
+            --rosa-suave: #f9eff1;
+
+            --crema: #faf7f2;
+            --beige: #eee2d4;
+
+            --dorado: #b8955a;
+            --dorado-claro: #d6bd88;
+
+            --texto: #3f3435;
+            --texto-suave: #756869;
+
+            --blanco: #ffffff;
+
+            --sombra: 0 10px 30px rgba(90, 60, 60, 0.10);
+
+            --rosa-principal: #ed8495;
+            --rosa: #f3a5b0;
+            --rosa-claro: #fbe4e8;
+            --rosa-palido: #fff4f5;
+            --crema: #fffaf8;
+            --dorado: #d5a95c;
+            --texto: #332522;
+            --blanco: #ffffff;
+        }
+
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+
+        /* =========================
+       RESET
+    ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: var(--crema);
+            color: var(--texto);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =========================
+       HEADER
+    ========================= */
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(250, 247, 242, 0.94);
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid rgba(184, 149, 90, 0.15);
+        }
+
+        .navbar {
+            max-width: 1200px;
+            margin: auto;
+
+            padding: 18px 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 30px;
+            font-weight: 600;
+
+            color: var(--texto);
+
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--dorado);
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 14px;
+            color: var(--texto-suave);
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--dorado);
+        }
+
+
+        /* =========================
+       HAMBURGUESA
+    ========================= */
+
+        .hamburger {
+            display: none;
+
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+
+            width: 32px;
+            height: 32px;
+
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+
+            z-index: 1100;
+        }
+
+        .hamburger span {
+            display: block;
+            height: 2px;
+            width: 100%;
+
+            background: var(--texto);
+
+            transition: 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+
+        /* =========================
+       HERO
+    ========================= */
+
+        .hero {
+            min-height: 680px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 80px 20px;
+
+            background:
+                linear-gradient(rgba(249, 239, 241, 0.78),
+                    rgba(250, 247, 242, 0.94)),
+                url("https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1800&q=80");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-small {
+            font-size: 25px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+
+            color: var(--dorado);
+
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: clamp(55px, 8vw, 95px);
+
+            line-height: 0.9;
+
+            font-weight: 600;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--dorado);
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: auto;
+
+            font-size: 15px;
+            line-height: 1.8;
+
+            color: var(--texto-suave);
+        }
+
+        .hero-button {
+            display: inline-block;
+
+            margin-top: 35px;
+
+            padding: 14px 32px;
+
+            border: 1px solid var(--dorado);
+
+            color: var(--texto);
+
+            font-size: 13px;
+            letter-spacing: 1px;
+
+            transition: 0.3s;
+        }
+
+        .hero-button:hover {
+            background: var(--dorado);
+            color: white;
+        }
+
+
+        /* =========================
+       CATEGORIAS
+    ========================= */
+
+        .categories {
+            max-width: 1200px;
+            margin: auto;
+
+            padding: 80px 25px 30px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title small {
+            color: var(--dorado);
+
+            text-transform: uppercase;
+            letter-spacing: 3px;
+
+            font-size: 12px;
+        }
+
+        .section-title h2 {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 50px;
+
+            margin-top: 8px;
+        }
+
+        .category-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+        .category-card {
+            min-height: 300px;
+
+            display: flex;
+            align-items: flex-end;
+
+            padding: 35px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 4px;
+
+            background-size: cover;
+            background-position: center;
+
+            transition: 0.4s;
+        }
+
+        .category-description {
+            position: relative;
+
+            margin-bottom: 35px;
+
+            overflow: hidden;
+
+            font-size: 20px;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .category-card::before {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background: linear-gradient(transparent 20%,
+                    rgba(50, 35, 35, 0.65));
+        }
+
+        .category-jewelry {
+            background-image:
+                url("https://images.unsplash.com/photo-1611652022419-a9419f74343d?auto=format&fit=crop&w=1000&q=80");
+        }
+
+        .category-fragrance {
+            background-image:
+                url("/imagenes/fragancias/fragancias.jpg");
+        }
+
+        .category-content {
+            position: relative;
+            z-index: 2;
+
+            color: white;
+        }
+
+        .category-content h3 {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 42px;
+
+            margin-bottom: 5px;
+        }
+
+        .category-content p {
+            font-size: 13px;
+            opacity: 0.9;
+        }
+
+
+        /* =========================
+       PRODUCTOS
+    ========================= */
+
+        .products-section {
+            max-width: 1200px;
+            margin: auto;
+
+            padding: 80px 25px;
+        }
+
+        .category-heading {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            margin-bottom: 30px;
+        }
+
+        .category-heading h2 {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 45px;
+        }
+
+        .category-heading span {
+            color: var(--dorado);
+
+            font-size: 13px;
+        }
+
+
+        /* =========================
+       PRODUCT GRID
+    ========================= */
+
+        .products-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 22px;
+
+            margin-bottom: 100px;
+        }
+
+        .product-card {
+            background: white;
+
+            border-radius: 5px;
+
+            overflow: hidden;
+
+            box-shadow: var(--sombra);
+
+            transition: 0.35s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .product-image {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+
+            object-fit: cover;
+
+            display: block;
+
+            background: var(--rosa-suave);
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-category {
+            font-size: 10px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1.5px;
+
+            color: var(--dorado);
+        }
+
+        .product-name {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 25px;
+
+            margin: 5px 0;
+        }
+
+        .product-description {
+            font-size: 12px;
+
+            line-height: 1.6;
+
+            color: var(--texto-suave);
+
+            min-height: 40px;
+        }
+
+        .product-bottom {
+            margin-top: 18px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .price {
+            font-size: 16px;
+
+            font-weight: 600;
+
+            color: var(--texto);
+        }
+
+        .buy-button {
+            padding: 9px 13px;
+
+            background: var(--rosa);
+
+            color: white;
+
+            border-radius: 2px;
+
+            font-size: 11px;
+
+            transition: 0.3s;
+        }
+
+        .buy-button:hover {
+            background: var(--dorado);
+        }
+
+
+        /* =========================
+       SEPARADOR
+    ========================= */
+
+        .separator {
+            display: flex;
+
+            align-items: center;
+
+            gap: 20px;
+
+            margin: 30px 0 70px;
+        }
+
+        .separator::before,
+        .separator::after {
+            content: "";
+
+            height: 1px;
+
+            flex: 1;
+
+            background: var(--beige);
+        }
+
+        .separator span {
+            color: var(--dorado);
+
+            font-size: 20px;
+        }
+
+        /* =========================
+FORMAS DE PAGO
+========================= */
+
+        .payment-section {
+            padding: 90px 25px;
+
+            background:
+                linear-gradient(135deg,
+                    #fdf0f2,
+                    #fffaf7);
+
+            border-top: 1px solid rgba(217, 167, 179, 0.25);
+            border-bottom: 1px solid rgba(217, 167, 179, 0.25);
+        }
+
+        .payment-header {
+            text-align: center;
+
+            margin-bottom: 45px;
+        }
+
+        .payment-header>span {
+            font-size: 20px;
+
+            letter-spacing: 3px;
+
+            color: var(--dorado);
+        }
+
+        .payment-header h2 {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 60px;
+
+            margin: 5px 0;
+        }
+
+        .payment-header h2 em {
+            color: var(--rosa);
+
+            font-weight: 500;
+        }
+
+        .payment-header p {
+            font-size: 18px;
+
+            letter-spacing: 1px;
+
+            color: var(--texto-suave);
+        }
+
+        .payment-icon img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+
+            padding: 12px;
+
+            background: white;
+
+            border-radius: 18px;
+        }
+
+        .payment-icon {
+            min-width: 110px;
+            height: 110px;
+
+            border-radius: 18px;
+
+            background: white;
+
+            border: 1px solid rgba(217, 167, 179, 0.3);
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 30px;
+
+            font-weight: 600;
+
+            overflow: hidden;
+        }
+
+        .payment-icon.bcp {
+            background: #07529b;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+
+        /* CONTENEDOR */
+
+        .payment-container {
+            max-width: 1000px;
+
+            margin: auto;
+
+            display: grid;
+
+            gap: 20px;
+        }
+
+
+        /* TARJETA */
+
+        .payment-card {
+            display: flex;
+
+            align-items: center;
+
+            gap: 30px;
+
+            background: rgba(255, 255, 255, 0.75);
+
+            border: 1px solid rgba(217, 167, 179, 0.45);
+
+            border-radius: 15px;
+
+            padding: 30px 35px;
+
+            box-shadow: 0 8px 25px rgba(90, 60, 60, 0.05);
+        }
+
+
+        /* ICONO */
+
+        .payment-icon {
+            min-width: 110px;
+            height: 110px;
+
+            border-radius: 18px;
+
+            background: linear-gradient(135deg,
+                    #7626a8,
+                    #9c3fc5);
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 30px;
+
+            font-weight: 600;
+        }
+
+        .payment-icon.bcp {
+            background: #07529b;
+
+            font-size: 22px;
+
+            font-weight: 700;
+        }
+
+
+        /* INFORMACIÓN */
+
+        .payment-info {
+            flex: 1;
+        }
+
+        .payment-info h3 {
+            font-size: 20px;
+
+            margin-bottom: 12px;
+        }
+
+        .payment-number {
+            display: inline-block;
+
+            background: var(--rosa-claro);
+
+            padding: 10px 25px;
+
+            border-radius: 30px;
+
+            font-size: 24px;
+
+            font-weight: 600;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 15px;
+        }
+
+        .payment-label {
+            font-size: 20px;
+
+            color: var(--rosa);
+
+            font-weight: 600;
+
+            margin-bottom: 3px;
+        }
+
+        .payment-info p {
+            font-size: 20px;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* BANCO */
+
+        .bank-row {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 20px;
+
+            margin: 10px 0;
+        }
+
+        .bank-row span {
+            font-size: 20px;
+
+            color: var(--rosa);
+
+            font-weight: 500;
+        }
+
+        .bank-row strong {
+            background: var(--rosa-claro);
+
+            padding: 9px 18px;
+
+            border-radius: 25px;
+
+            font-size: 20px;
+
+            letter-spacing: 1px;
+        }
+
+        .copy-wrapper {
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            background: var(--rosa-claro);
+
+            padding: 9px 12px 9px 18px;
+
+            border-radius: 25px;
+        }
+
+        .copy-wrapper strong {
+            background: none;
+
+            padding: 0;
+
+            border-radius: 0;
+
+            font-size: 20px;
+
+            letter-spacing: 1px;
+        }
+
+        .copy-btn {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            width: 26px;
+            height: 26px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background: var(--dorado);
+
+            color: white;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+            flex-shrink: 0;
+        }
+
+        .copy-btn:hover {
+            background: var(--rosa);
+        }
+
+        .copy-btn.copied {
+            background: #4caf50;
+        }
+
+
+        /* GRACIAS */
+
+        .payment-thanks {
+            text-align: center;
+
+            margin-top: 45px;
+        }
+
+        .payment-thanks em {
+            font-family: "Cormorant Garamond", serif;
+
+            color: var(--rosa);
+
+            font-size: 40px;
+        }
+
+        .payment-thanks div {
+            display: inline-block;
+
+            margin-top: 18px;
+
+            padding: 12px 35px;
+
+            border: 1px solid var(--rosa);
+
+            border-radius: 30px;
+
+            letter-spacing: 4px;
+
+            font-size: 12px;
+        }
+
+
+
+        /* =========================
+       ABOUT
+    ========================= */
+
+        .about {
+            background: var(--rosa-claro);
+
+            padding: 80px 25px;
+
+            text-align: center;
+        }
+
+        .about-content {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .about h2 {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 48px;
+
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            color: var(--texto-suave);
+
+            font-size: 14px;
+
+            line-height: 1.9;
+        }
+
+
+        /* =========================
+       FOOTER
+    ========================= */
+
+        footer {
+            background: #3f3435;
+
+            color: white;
+
+            padding: 50px 25px 25px;
+
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: "Cormorant Garamond", serif;
+
+            font-size: 36px;
+
+            margin-bottom: 10px;
+        }
+
+        .footer-logo span {
+            color: var(--dorado-claro);
+        }
+
+        footer p {
+            font-size: 12px;
+
+            color: #ddd;
+
+            margin-bottom: 30px;
+        }
+
+        .social {
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            gap: 20px;
+
+            margin-bottom: 30px;
+        }
+
+        .social a {
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            width: 42px;
+            height: 42px;
+
+            border-radius: 50%;
+
+            background: rgba(255, 255, 255, 0.08);
+
+            transition: 0.3s;
+        }
+
+        .social a:hover {
+            background: var(--dorado-claro);
+        }
+
+        .social a svg {
+            transition: 0.3s;
+        }
+
+        .copyright {
+            padding-top: 20px;
+
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+            font-size: 10px;
+
+            color: #aaa;
+        }
+
+
+        /* =========================
+       WHATSAPP
+    ========================= */
+
+        .whatsapp {
+            position: fixed;
+
+            right: 22px;
+            bottom: 22px;
+
+            width: 58px;
+            height: 58px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #25D366;
+
+            color: white;
+
+            font-size: 25px;
+
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+
+            z-index: 2000;
+        }
+
+
+        /* =========================
+       RESPONSIVE
+    ========================= */
+
+        @media (max-width: 650px) {
+
+            .payment-section {
+                padding: 65px 15px;
+            }
+
+            .payment-header h2 {
+                font-size: 45px;
+            }
+
+            .payment-card {
+                flex-direction: column;
+
+                text-align: center;
+
+                padding: 25px 18px;
+            }
+
+            .payment-icon {
+                min-width: 90px;
+                height: 90px;
+            }
+
+            .payment-number {
+                font-size: 20px;
+            }
+
+            .bank-row {
+                flex-direction: column;
+
+                gap: 6px;
+
+                margin: 18px 0;
+            }
+
+            .bank-row strong {
+                width: 100%;
+
+                overflow-wrap: anywhere;
+            }
+
+            .payment-thanks em {
+                font-size: 27px;
+            }
+
+            .payment-thanks div {
+                padding: 12px 15px;
+
+                letter-spacing: 2px;
+            }
+
+            .about h2 {
+                font-size: 40px;
+            }
+
+        }
+
+        @media (max-width: 1000px) {
+
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+
+        @media (max-width: 750px) {
+
+            header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+
+            body {
+                padding-top: 78px;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+
+                width: 70%;
+                max-width: 300px;
+                height: 100vh;
+
+                background: var(--crema);
+
+                flex-direction: column;
+
+                justify-content: center;
+                align-items: center;
+
+                gap: 30px;
+
+                transition: right 0.4s ease;
+
+                box-shadow: -5px 0 25px rgba(90, 60, 60, 0.15);
+            }
+
+            nav.active {
+                right: 0;
+            }
+
+            nav a {
+                font-size: 18px;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+
+                gap: 15px;
+            }
+
+            .products-section {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .product-info {
+                padding: 15px;
+            }
+
+            .product-name {
+                font-size: 21px;
+            }
+
+            .category-heading h2 {
+                font-size: 36px;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+
+            .hero {
+                min-height: 600px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .product-description {
+                display: none;
+            }
+
+            .buy-button {
+                padding: 8px 9px;
+            }
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+     HEADER
+========================= -->
+
+    <header>
+
+        <div class="navbar">
+
+            <a href="#" class="logo">
+                The <span>Lizeth</span> Store
+            </a>
+
+            <nav id="navMenu">
+                <a href="#inicio">Inicio</a>
+                <a href="#joyas">Joyas</a>
+                <a href="#fragancias">Fragancias</a>
+                <a href="#pagos">Formas de pago</a>
+                <a href="#nosotros">Nosotros</a>
+            </nav>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+     HERO
+========================= -->
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-content">
+
+            <div class="hero-small">
+                The Lizeth Store
+            </div>
+
+            <h1>
+                Detalles que<br>
+                <span>hablan de ti</span>
+            </h1>
+
+            <p>
+                Descubre nuestra selección de joyas y fragancias
+                pensadas para acompañarte en cada momento.
+            </p>
+
+            <a href="#catalogo" class="hero-button">
+                VER CATÁLOGO
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+     CATEGORÍAS
+========================= -->
+
+    <section class="categories">
+
+        <div class="section-title">
+
+            <small>Descubre nuestra colección</small>
+
+            <h2>
+                Elige tu estilo
+            </h2>
+
+        </div>
+
+
+        <div class="category-grid">
+
+            <a href="#joyas" class="category-card category-jewelry">
+
+                <div class="category-content">
+
+                    <h3>Joyas</h3>
+
+                    <p>
+                        Detalles delicados para cada ocasión
+                    </p>
+
+                </div>
+
+            </a>
+
+
+            <a href="#fragancias" class="category-card category-fragrance">
+
+                <div class="category-content">
+
+                    <h3>Fragancias</h3>
+
+                    <p>
+                        Aromas que dejan huella
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+     CATÁLOGO
+========================= -->
+
+    <section class="products-section" id="catalogo">
+
+
+        <!-- =====================
+         JOYAS
+    ====================== -->
+
+        <div id="joyas">
+
+
+            <div class="category-heading">
+
+                <h2>
+                    ✨ Joyas
+                </h2>
+
+                <span>
+                    NUESTRA COLECCIÓN
+                </span>
+
+            </div>
+
+            <div class="category-description">
+                Joyas Waterproof hechas con verdadero acero inoxidable 316L enchapados de oro de 18K, resistentes al
+                agua
+            </div>
+
+
+
+            <div class="products-grid">
+
+
+                <!-- PRODUCTO 1 -->
+
+                <article class="product-card">
+
+                    <img src="imagenes/joyas/anillo3.png" alt="Aretes plateados" class="product-image">
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            anillo
+                        </div>
+
+                        <h3 class="product-name">
+                            Anillo Espiral
+                        </h3>
+
+                        <p class="product-description">
+                            Diseño delicado y elegante para complementar
+                            cualquier look.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                S/ 28.00
+                            </span>
+
+                            <a class="buy-button"
+                                href="https://wa.me/message/7WWDAJ33MPKTO1?text=Hola%2C%20estoy%20interesada%20en%20los%20Aretes%20Elegance"
+                                target="_blank">
+                                CONSULTAR
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PRODUCTO 2 -->
+
+                <article class="product-card">
+
+                    <img src="imagenes/joyas/anillo2.png" alt="Collar" class="product-image">
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            anillo
+                        </div>
+
+                        <h3 class="product-name">
+                            Esferas minimalista
+                        </h3>
+
+                        <p class="product-description">
+                            Diseño minimalista y delicado.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                S/ 28.00
+                            </span>
+
+                            <a class="buy-button"
+                                href="https://wa.me/message/7WWDAJ33MPKTO1?text=Hola%2C%20estoy%20interesada%20en%20el%20Collar%20Delicate"
+                                target="_blank">
+                                CONSULTAR
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PRODUCTO 3 -->
+
+                <article class="product-card">
+
+                    <img src="imagenes/joyas/pulsera2.png" alt="Pulsera" class="product-image">
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Pulseras
+                        </div>
+
+                        <h3 class="product-name">
+                            Pulsera Estrella
+                        </h3>
+
+                        <p class="product-description">
+                            Un detalle sutil y femenino para tu día a día.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                S/ 40.00
+                            </span>
+
+                            <a class="buy-button"
+                                href="https://wa.me/message/7WWDAJ33MPKTO1?text=Hola%2C%20estoy%20interesada%20en%20la%20Pulsera%20Shine"
+                                target="_blank">
+                                CONSULTAR
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PRODUCTO 4 -->
+
+                <article class="product-card">
+
+                    <img src="imagenes/joyas/collar1.png" alt="Anillo" class="product-image">
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            collar
+                        </div>
+
+                        <h3 class="product-name">
+                            Espiral Dorado
+                        </h3>
+
+                        <p class="product-description">
+                            Elegante y femenino para cualquier ocasión.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                S/ 48.00
+                            </span>
+
+                            <a class="buy-button"
+                                href="https://wa.me/message/7WWDAJ33MPKTO1?text=Hola%2C%20estoy%20interesada%20en%20el%20Anillo%20Love"
+                                target="_blank">
+                                CONSULTAR
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 5 -->
+
+                <article class="product-card">
+
+                    <img src="imagenes/joyas/arete1.png" alt="Anillo" class="product-image">
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            arete
+                        </div>
+
+                        <h3 class="product-name">
+                            Espiral Dorado
+                        </h3>
+
+                        <p class="product-description">
+                            Elegante y femenino para cualquier ocasión.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                S/ 48.00
+                            </span>
+
+                            <a class="buy-button"
+                                href="https://wa.me/message/7WWDAJ33MPKTO1?text=Hola%2C%20estoy%20interesada%20en%20el%20Anillo%20Love"
+                                target="_blank">
+                                CONSULTAR
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 6 -->
+
+                <article class="product-card">
+
+                    <img src="imagenes/joyas/arete5.png" alt="Anillo" class="product-image">
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            arete
+                        </div>
+
+                        <h3 class="product-name">
+                            Espiral Dorado
+                        </h3>
+
+                        <p class="product-description">
+                            Elegante y femenino para cualquier ocasión.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                S/ 48.00
+                            </span>
+
+                            <a class="buy-button"
+                                href="https://wa.me/message/7WWDAJ33MPKTO1?text=Hola%2C%20estoy%20interesada%20en%20el%20Anillo%20Love"
+                                target="_blank">
+                                CONSULTAR
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <!-- PRODUCTO 6 -->
+
+                <article class="product-card">
+
+                    <img src="imagenes/joyas/arete3.png" alt="Anillo" class="product-image">
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            arete
+                        </div>
+
+                        <h3 class="product-name">
+                            Espiral Dorado
+                        </h3>
+
+                        <p class="product-description">
+                            Elegante y femenino para cualquier ocasión.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                S/ 48.00
+                            </span>
+
+                            <a class="buy-button"
+                                href="https://wa.me/message/7WWDAJ33MPKTO1?text=Hola%2C%20estoy%20interesada%20en%20el%20Anillo%20Love"
+                                target="_blank">
+                                CONSULTAR
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCTO 6 -->
+
+                <article class="product-card">
+
+                    <img src="imagenes/joyas/arete6.png" alt="Anillo" class="product-image">
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            arete
+                        </div>
+
+                        <h3 class="product-name">
+                            Espiral Dorado
+                        </h3>
+
+                        <p class="product-description">
+                            Elegante y femenino para cualquier ocasión.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                S/ 48.00
+                            </span>
+
+                            <a class="buy-button"
+                                href="https://wa.me/message/7WWDAJ33MPKTO1?text=Hola%2C%20estoy%20interesada%20en%20el%20Anillo%20Love"
+                                target="_blank">
+                                CONSULTAR
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="separator">
+            <span>✦</span>
+        </div>
+
+
+
+        <!-- =====================
+         FRAGANCIAS
+    ====================== -->
+
+        <div id="fragancias">
+
+            <div class="category-heading">
+
+                <h2>
+                    🌸 Fragancias
+                </h2>
+
+                <span>
+                    NUESTRA COLECCIÓN
+                </span>
+
+            </div>
+
+            <div class="category-description">
+                Fragancias importadas 100% originales, directo desde USA
+            </div>
+
+
+            <div class="products-grid">
+
+
+                <!-- BARE VANILLA -->
+
+                <article class="product-card">
+
+                    <img src="imagenes/fragancias/bare-vainilla.jpeg" alt="Victoria's Secret Bare Vanilla"
+                        class="product-image">
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Victoria's Secret
+                        </div>
+
+                        <h3 class="product-name">
+                            Bare Vanilla
+                        </h3>
+
+                        <p class="product-description">
+                            Fragancia cálida, dulce y envolvente.
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                S/ 65.00
+                            </span>
+
+                            <a class="buy-button"
+                                href="https://wa.me/message/7WWDAJ33MPKTO1?text=Hola%2C%20estoy%20interesada%20en%20Bare%20Vanilla"
+                                target="_blank">
+                                CONSULTAR
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- FRAGANCIA 3 -->
+
+                <article class="product-card">
+
+                    <img src="imagenes/fragancias/love-spell.jpeg" alt="Fragancia" class="product-image">
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Victoria's Secret
+                        </div>
+
+                        <h3 class="product-name">
+                            Love Spell
+                        </h3>
+
+                        <p class="product-description">
+                            Durazno, flor de cerezo y
+                            jazmín. El clásico ícono VS
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                S/ 65.00
+                            </span>
+
+                            <a class="buy-button" href="https://wa.me/message/7WWDAJ33MPKTO1" target="_blank">
+                                CONSULTAR
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- FRAGANCIA 4 -->
+
+                <article class="product-card">
+
+                    <img src="imagenes/fragancias/velvet-petals.jpeg" alt="Fragancia" class="product-image">
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Victoria's Secret
+                        </div>
+
+                        <h3 class="product-name">
+                            Velvet Petals
+                        </h3>
+
+                        <p class="product-description">
+                            Peonía, fresia y jazmín, con
+                            shimmer dorado sutil
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                S/ 65.00
+                            </span>
+
+                            <a class="buy-button" href="https://wa.me/message/7WWDAJ33MPKTO1" target="_blank">
+                                CONSULTAR
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <!-- FRAGANCIA 5 -->
+
+                <article class="product-card">
+
+                    <img src="imagenes/fragancias/aqua-kiss.jpeg" alt="Fragancia" class="product-image">
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Victoria's Secret
+                        </div>
+
+                        <h3 class="product-name">
+                            Aqua Kiss
+                        </h3>
+
+                        <p class="product-description">
+                            Melón y cítricos, ligero y
+                            energizante, con shimmer
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                S/ 65.00
+                            </span>
+
+                            <a class="buy-button" href="https://wa.me/message/7WWDAJ33MPKTO1" target="_blank">
+                                CONSULTAR
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <!-- FRAGANCIA 2 -->
+
+                <article class="product-card">
+
+                    <img src="imagenes/fragancias/bare-vainilla-crema.jpeg" alt="Fragancia" class="product-image">
+
+                    <div class="product-info">
+
+                        <div class="product-category">
+                            Victoria's Secret
+                        </div>
+
+                        <h3 class="product-name">
+                            Crema Corporal Bare Vainilla
+                        </h3>
+
+                        <p class="product-description">
+                            Crema corporal hidratante
+                            con el mismo aroma dulce
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <span class="price">
+                                S/ 65.00
+                            </span>
+
+                            <a class="buy-button" href="https://wa.me/message/7WWDAJ33MPKTO1" target="_blank">
+                                CONSULTAR
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+     FORMAS DE PAGO
+========================= -->
+
+    <section class="payment-section" id="pagos">
+
+        <div class="payment-header">
+
+            <span>
+                THE LIZETH STORE
+            </span>
+
+            <h2>
+                Formas de pago
+            </h2>
+
+            <p>
+                Realiza tu pago de manera segura
+            </p>
+
+        </div>
+
+
+        <div class="payment-container">
+
+
+            <!-- YAPE / PLIN -->
+
+            <div class="payment-card">
+
+                <div class="payment-icon">
+                    <img src="imagenes/redes/yape-app-logo-png_seeklogo-399697.png" alt="yape" class="payment-icon">
+                </div>
+
+                <div class="payment-icon">
+                    <img src="imagenes/redes/plin-logo-png_seeklogo-386806.png" alt="plin" class="payment-icon">
+                </div>
+
+
+                <div class="payment-info">
+
+                    <h3>
+                        Pago con Yape / Plin ♡
+                    </h3>
+
+                    <div class="payment-number">
+                        904 130 802
+                    </div>
+
+                    <div class="payment-label">
+                        Titular
+                    </div>
+
+                    <p>
+                        THALIA LIZETH PIZARRO CALUMANI
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- BCP -->
+
+            <div class="payment-card">
+
+                <div class="payment-icon bcp">
+                    <img src="imagenes/redes/images.png" alt="bcp" class="payment-icon">
+                </div>
+
+                <div class="payment-info">
+
+                    <h3>
+                        Transferencia bancaria BCP ♡
+                    </h3>
+
+                    <div class="bank-row">
+
+                        <span>
+                            Número de Cuenta (Soles)
+                        </span>
+
+                        <span class="copy-wrapper">
+                            <strong>19172914642051</strong>
+                            <button class="copy-btn" data-copy="19172914642051" aria-label="Copiar número de cuenta">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" />
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                                </svg>
+                            </button>
+                        </span>
+
+
+                    </div>
+
+                    <div class="bank-row">
+
+                        <span>
+                            CCI (Código Interbancario)
+                        </span>
+
+                        <span class="copy-wrapper">
+                            <strong>00219117291464205151</strong>
+                            <button class="copy-btn" data-copy="00219117291464205151" aria-label="Copiar CCI">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" />
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                                </svg>
+                            </button>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="payment-thanks">
+
+            <em>
+                ¡Gracias por tu confianza!
+            </em>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+     NOSOTROS
+========================= -->
+
+    <section class="about" id="nosotros">
+
+        <div class="about-content">
+
+            <h2>
+                ✦ The Lizeth Store ✦
+            </h2>
+
+            <p>
+                Un espacio creado para encontrar esos pequeños detalles
+                que hacen especial cada momento. Productos cuidadosamente elegidos para ti.
+                <br>
+                The Lizeth Store nace para chicas que aman rodearse de cosas lindas y cuidadosamente elegidas. Aquí
+                encontrarás joyas en acero quirúrgico 316L con enchape de oro 18k, resistentes al agua y pensadas para
+                durar, además de fragancias y productos de cuidado personal 100% originales, traídos directamente desde
+                Estados Unidos.
+                <br>
+                Cada pieza que ves aquí pasa por un proceso de selección cuidadoso, porque quiero que lo que llega a tus
+                manos sea exactamente lo que promete: calidad real, sin sorpresas.
+                <br>
+                Hecho con cariño, para las que se atreven a brillar a su manera. 🤍✨
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+     FOOTER
+========================= -->
+
+    <footer>
+
+        <div class="footer-logo">
+            The <span>Lizeth</span> Store
+        </div>
+
+
+        <div class="social">
+
+            <a href="https://www.instagram.com/the.lizeth.store/" target="_blank">
+                <svg viewBox="0 0 24 24" width="50" height="50" fill="white">
+                    <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                </svg>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61593919891451" target="_blank">
+                <svg viewBox="0 0 24 24" width="54" height="54" fill="white">
+                    <path
+                        d="M22 12.061C22 6.505 17.523 2 12 2S2 6.505 2 12.061c0 5.022 3.657 9.184 8.438 9.939v-7.03H7.898v-2.909h2.54V9.845c0-2.522 1.492-3.915 3.777-3.915 1.094 0 2.238.197 2.238.197v2.476h-1.26c-1.243 0-1.63.775-1.63 1.57v1.888h2.773l-.443 2.909h-2.33V22c4.78-.755 8.437-4.917 8.437-9.939z" />
+                </svg>
+            </a>
+
+            <a href="https://www.tiktok.com/@the.lizeth.store" target="_blank">
+                <svg viewBox="0 0 24 24" width="50" height="50" fill="white">
+                    <path
+                        d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z" />
+                </svg>
+            </a>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 The Lizeth Store · Todos los derechos reservados
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================
+     WHATSAPP
+========================= -->
+
+    <a class="whatsapp" href="https://wa.me/message/7WWDAJ33MPKTO1" target="_blank" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+            <path
+                d="M12.05 2C6.505 2 2 6.505 2 12.05c0 1.89.516 3.66 1.41 5.176L2 22l4.94-1.377A9.98 9.98 0 0 0 12.05 22.1C17.596 22.1 22.1 17.596 22.1 12.05 22.1 6.505 17.596 2 12.05 2zm0 18.267a8.184 8.184 0 0 1-4.176-1.145l-.3-.178-3.098.864.83-3.02-.196-.31a8.19 8.19 0 0 1-1.264-4.428c0-4.522 3.68-8.202 8.204-8.202 4.522 0 8.202 3.68 8.202 8.202 0 4.523-3.68 8.217-8.202 8.217z" />
+        </svg>
+    </a>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Cierra el menú al hacer clic en un link
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+
+    <script>
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const text = btn.getAttribute('data-copy');
+
+                navigator.clipboard.writeText(text).then(() => {
+                    btn.classList.add('copied');
+                    alert('¡Información copiada!');
+
+                    setTimeout(() => {
+                        btn.classList.remove('copied');
+                    }, 1500);
+                }).catch(() => {
+                    alert('No se pudo copiar. Intenta seleccionar el texto manualmente.');
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>
