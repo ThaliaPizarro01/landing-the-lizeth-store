@@ -669,6 +669,24 @@ nav a:hover {
     background: var(--dorado);
 }
 
+.buy-button-item{
+    padding: 9px 9px;
+
+    background: var(--rosa);
+
+    color: white;
+
+    border-radius: 10px;
+
+    font-size: 11px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.buy-button-item:hover{
+    background: var(--dorado);
+}
+
 
 /* =========================
    SEPARADOR
@@ -1477,6 +1495,10 @@ footer p {
 
 @media (max-width: 650px) {
 
+    .price {
+        font-size: 13px;
+    }
+
     .payment-section {
         padding: 65px 15px;
     }
@@ -1540,6 +1562,18 @@ footer p {
 
     .modal-info h3 {
         font-size: 28px;
+        justify-content: center;
+        display: flex;
+    }
+
+
+    .modal-price {
+        display: flex;
+        justify-content: center;
+    }
+
+    .modal-info p {
+        text-align: center;
     }
 
 
@@ -1646,6 +1680,10 @@ footer p {
 
     .buy-button {
         padding: 8px 9px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        width: 290px;
     }
 
 
