@@ -47,6 +47,8 @@ function startModalAutoplay() {
 }
 
 
+const WHATSAPP_BASE = "https://wa.me/51907134693";
+
 function openModal(data) {
 
     modalImg1.src = data.img1;
@@ -57,7 +59,9 @@ function openModal(data) {
     modalName.textContent = data.name;
     modalDesc.textContent = data.desc;
     modalPrice.textContent = data.price;
-    modalConsultar.href = data.whatsapp;
+
+    const message = `Hola, quiero saber más sobre este producto: ${data.name}`;
+    modalConsultar.href = `${WHATSAPP_BASE}?text=${encodeURIComponent(message)}`;
 
     showModalSlide(0);
     startModalAutoplay();
