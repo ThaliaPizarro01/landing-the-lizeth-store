@@ -72,7 +72,7 @@ function startModalAutoplay() {
 
 function getWhatsAppLink(productName) {
 
-    const message = `🌸✨ Hola ♡ Estoy interesada en el producto: ${productName}. ¿Podrían brindarme más información? ✨🌸`;
+    const message = `🌸✨ Hola ♡ Estoy interesad@ en el producto: ${productName}. ¿Podrían brindarme más información? ✨🌸`;
 
     return `${WHATSAPP_BASE}?text=${encodeURIComponent(message)}`;
 
