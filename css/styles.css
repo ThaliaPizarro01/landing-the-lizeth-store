@@ -1163,6 +1163,50 @@ footer p {
     z-index: 2000;
 }
 
+.visit-counter-section {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 60px 25px;
+
+    text-align: center;
+}
+
+.visit-line {
+    width: 80px;
+    height: 2px;
+
+    background: var(--dorado);
+
+    margin-bottom: 22px;
+}
+
+.visit-number {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 56px;
+
+    font-weight: 600;
+
+    color: var(--texto);
+
+    line-height: 1;
+}
+
+.visit-label {
+    margin-top: 8px;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: var(--texto-suave);
+}
 
 /* =========================
    RESPONSIVE
@@ -1326,6 +1370,11 @@ footer p {
 
     .buy-button {
         padding: 8px 9px;
+    }
+
+
+    .visit-number {
+        font-size: 44px;
     }
 
 }
