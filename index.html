@@ -109,13 +109,24 @@
         }
 
         .logo {
-            font-family: "Cormorant Garamond", serif;
-            font-size: 30px;
-            font-weight: 600;
+            display: flex;
+            align-items: center;
 
-            color: var(--texto);
+            width: 48px;
+            height: 48px;
 
-            letter-spacing: 1px;
+            flex-shrink: 0;
+        }
+
+        .logo img {
+            width: 100px;
+            height: 100px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            display: block;
         }
 
         .logo span {
@@ -946,11 +957,26 @@ FORMAS DE PAGO
         }
 
         .footer-logo {
-            font-family: "Cormorant Garamond", serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-            font-size: 36px;
+            margin-bottom: 20px;
+        }
 
-            margin-bottom: 10px;
+        .footer-logo-container {
+            width: 200px;
+            height: 200px;
+            display: flex;
+        }
+
+        .footer-logo img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 20%;
+            display: block;
+            margin: auto;
         }
 
         .footer-logo span {
@@ -1223,8 +1249,8 @@ FORMAS DE PAGO
 
         <div class="navbar">
 
-            <a href="#" class="logo">
-                The <span>Lizeth</span> Store
+            <a href="#inicio" class="logo">
+                <img src="./imagenes/marca/logo-sin-fondo.png" alt="The Lizeth Store">
             </a>
 
             <nav id="navMenu">
@@ -2093,7 +2119,10 @@ FORMAS DE PAGO
     <footer>
 
         <div class="footer-logo">
-            The <span>Lizeth</span> Store
+            <div class="footer-logo-container">
+                <img src="/imagenes/marca/logo-lading.png" alt="The Lizeth Store">
+            </div>
+
         </div>
 
 
