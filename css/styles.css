@@ -658,10 +658,10 @@ nav a:hover {
 
     color: white;
 
-    border-radius: 2px;
+    border-radius: 10px;
 
     font-size: 11px;
-
+    font-weight: bold;
     transition: 0.3s;
 }
 
@@ -1209,6 +1209,269 @@ footer p {
 }
 
 /* =========================
+   BOTÓN VER
+========================= */
+
+.view-button {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 14px;
+
+    padding: 9px;
+
+    background: none;
+
+    border: 1px solid var(--dorado);
+
+    color: var(--texto);
+
+    font-size: 11px;
+
+    font-family: "Poppins", sans-serif;
+
+    letter-spacing: 1.5px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.view-button:hover {
+    background: var(--dorado);
+    color: white;
+}
+
+
+/* =========================
+   MODAL PRODUCTO
+========================= */
+
+.product-modal {
+    position: fixed;
+    inset: 0;
+
+    z-index: 3000;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.product-modal.active {
+    display: flex;
+}
+
+.product-modal-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(51, 37, 34, 0.55);
+
+    backdrop-filter: blur(3px);
+}
+
+.product-modal-content {
+    position: relative;
+
+    z-index: 2;
+
+    background: var(--crema);
+
+    max-width: 780px;
+    width: 100%;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    border-radius: 12px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+
+    animation: modalIn 0.3s ease;
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-close {
+    position: absolute;
+
+    top: 14px;
+    right: 14px;
+
+    z-index: 3;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    color: var(--texto);
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.modal-close:hover {
+    background: var(--rosa);
+    color: white;
+}
+
+.modal-gallery {
+    position: relative;
+
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    background: var(--rosa-suave);
+}
+
+.modal-slide {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0;
+
+    transition: opacity 0.6s ease-in-out;
+}
+
+.modal-slide.active {
+    opacity: 1;
+}
+
+.modal-slide img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.modal-dots {
+    position: absolute;
+
+    bottom: 16px;
+
+    left: 0;
+    right: 0;
+
+    z-index: 3;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.modal-dot {
+    width: 15px;
+    height: 15px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    padding: 0;
+
+    background: rgba(255, 255, 255, 0.6);
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.modal-dot.active {
+    width: 35px;
+
+    border-radius: 10px;
+
+    background: var(--rosa-principal);
+}
+
+.modal-info {
+    padding: 35px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.modal-price {
+    font-size: 25px;
+
+    font-weight: 600;
+
+    color: var(--dorado);
+
+    margin-bottom: 8px;
+}
+
+.modal-info h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 40px;
+
+    margin-bottom: 14px;
+}
+
+.modal-info p {
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    color: var(--texto-suave);
+
+    margin-bottom: 25px;
+}
+
+.modal-consultar {
+    display: inline-block;
+
+    width: fit-content;
+
+    padding: 12px 28px;
+
+    font-size: 12px;
+}
+
+
+/* =========================
    RESPONSIVE
 ========================= */
 
@@ -1266,6 +1529,19 @@ footer p {
     .about h2 {
         font-size: 40px;
     }
+
+    .product-modal-content {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-info {
+        padding: 25px 22px;
+    }
+
+    .modal-info h3 {
+        font-size: 28px;
+    }
+
 
 }
 

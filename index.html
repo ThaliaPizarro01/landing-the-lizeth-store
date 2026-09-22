@@ -258,6 +258,13 @@
                             cualquier look.
                         </p>
 
+                        <button class="view-button" data-name="Anillo Espiral" data-price="S/ 28.00"
+                            data-desc="Diseño delicado y elegante para complementar cualquier look."
+                            data-img1="imagenes/joyas/anillo3.png" data-img2="imagenes/joyas/anillo3a.png"
+                            data-whatsapp="https://wa.me/message/7WWDAJ33MPKTO1?text=Hola%2C%20estoy%20interesada%20en%20los%20Aretes%20Elegance">
+                            VER MÁS
+                        </button>
+
                         <div class="product-bottom">
 
                             <span class="price">
@@ -296,6 +303,13 @@
                         <p class="product-description">
                             Un detalle sutil y femenino para tu día a día.
                         </p>
+
+                        <button class="view-button" data-name="Pulsera Estrella" data-price="S/ 40.00"
+                            data-desc="Un detalle sutil y femenino para tu día a día."
+                            data-img1="imagenes/joyas/pulsera2.png" data-img2="imagenes/joyas/pulsera2a.png"
+                            data-whatsapp="https://wa.me/message/7WWDAJ33MPKTO1?text=Hola%2C%20estoy%20interesada%20en%20la%20Pulsera%20Shine">
+                            VER MÁS
+                        </button>
 
                         <div class="product-bottom">
 
@@ -337,6 +351,13 @@
                             Elegante y femenino para cualquier ocasión.
                         </p>
 
+                        <button class="view-button" data-name="Espiral Dorado" data-price="S/ 40.00"
+                            data-desc="Elegante y femenino para cualquier ocasión."
+                            data-img1="imagenes/joyas/collar1.png" data-img2="imagenes/joyas/collar1a.png"
+                            data-whatsapp="https://wa.me/message/7WWDAJ33MPKTO1?text=Hola%2C%20estoy%20interesada%20en%20el%20Anillo%20Love">
+                            VER MÁS
+                        </button>
+
                         <div class="product-bottom">
 
                             <span class="price">
@@ -375,6 +396,13 @@
                         <p class="product-description">
                             Elegante y femenino para cualquier ocasión.
                         </p>
+
+                        <button class="view-button" data-name="Infinito Brillante" data-price="S/ 28.00"
+                            data-desc="Elegante y femenino para cualquier ocasión."
+                            data-img1="imagenes/joyas/arete3.png" data-img2="imagenes/joyas/arete3a.png"
+                            data-whatsapp="https://wa.me/message/7WWDAJ33MPKTO1?text=Hola%2C%20estoy%20interesada%20en%20el%20Anillo%20Love">
+                            VER MÁS
+                        </button>
 
                         <div class="product-bottom">
 
@@ -832,8 +860,55 @@
                 d="M12.05 2C6.505 2 2 6.505 2 12.05c0 1.89.516 3.66 1.41 5.176L2 22l4.94-1.377A9.98 9.98 0 0 0 12.05 22.1C17.596 22.1 22.1 17.596 22.1 12.05 22.1 6.505 17.596 2 12.05 2zm0 18.267a8.184 8.184 0 0 1-4.176-1.145l-.3-.178-3.098.864.83-3.02-.196-.31a8.19 8.19 0 0 1-1.264-4.428c0-4.522 3.68-8.202 8.204-8.202 4.522 0 8.202 3.68 8.202 8.202 0 4.523-3.68 8.217-8.202 8.217z" />
         </svg>
     </a>
+    <div class="product-modal" id="productModal">
 
+        <div class="product-modal-overlay" id="modalOverlay"></div>
+
+        <div class="product-modal-content">
+
+            <button class="modal-close" id="modalClose" aria-label="Cerrar">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+
+            <div class="modal-gallery">
+
+                <div class="modal-slide active" data-slide="0">
+                    <img id="modalImg1" src="" alt="">
+                </div>
+
+                <div class="modal-slide" data-slide="1">
+                    <img id="modalImg2" src="" alt="">
+                </div>
+
+                <div class="modal-dots">
+                    <button class="modal-dot active" data-slide="0" aria-label="Foto 1"></button>
+                    <button class="modal-dot" data-slide="1" aria-label="Foto 2"></button>
+                </div>
+
+            </div>
+
+            <div class="modal-info">
+
+                <h3 id="modalName"></h3>
+
+                <span class="modal-price" id="modalPrice"></span>
+
+                <p id="modalDesc"></p>
+
+                <a class="buy-button modal-consultar" id="modalConsultar" target="_blank">
+                    CONSULTAR
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
     <script type="module" src="js/counter.js"></script>
+    <script src="js/product-modal.js"></script>
     <script src="js/main.js"></script>
 
 </body>
