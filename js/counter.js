@@ -6,6 +6,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebas
 import {
     getDatabase,
     ref,
+    get,
     runTransaction
 } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
 
@@ -31,8 +32,9 @@ const yaContadaEnEstaSesion = sessionStorage.getItem("visitaContada");
 
 if (!yaContadaEnEstaSesion) {
 
-    // Suma 1 de forma segura (transacción, evita conflictos
-    // si hay varias visitas al mismo tiempo)
+    // Primera vez en esta sesión: suma 1 de forma segura
+    // (transacción, evita conflictos si hay varias visitas
+    // al mismo tiempo)
     runTransaction(visitsRef, (currentValue) => {
         return (currentValue || 0) + 1;
     }).then((result) => {
@@ -45,20 +47,28 @@ if (!yaContadaEnEstaSesion) {
 
     }).catch((error) => {
         console.error("Error al actualizar el contador:", error);
+
+        // Aunque falle la suma, intentamos mostrar el número actual
+        // para que nunca se quede en "..."
+        get(visitsRef).then((snapshot) => {
+            if (counterEl) {
+                counterEl.textContent = snapshot.val() || 0;
+            }
+        });
     });
 
 } else {
 
-    // Si ya se contó en esta sesión, solo mostramos
-    // el número actual sin volver a sumar
-    runTransaction(visitsRef, (currentValue) => {
-        return currentValue; // no modifica el valor
-    }).then((result) => {
+    // Ya se contó en esta sesión (por ejemplo, recargaste la página):
+    // solo LEEMOS el número actual, sin intentar escribir nada
+    get(visitsRef).then((snapshot) => {
 
         if (counterEl) {
-            counterEl.textContent = result.snapshot.val() || 0;
+            counterEl.textContent = snapshot.val() || 0;
         }
 
+    }).catch((error) => {
+        console.error("Error al leer el contador:", error);
     });
 
 }

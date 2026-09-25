@@ -26,825 +26,731 @@
     <!-- =========================
      HEADER
 ========================= -->
+    <div class="page-wrapper">
 
-    <header>
+        <header>
 
-        <div class="navbar">
+            <div class="navbar">
 
-            <a href="#inicio" class="logo">
-                <img src="./imagenes/marca/logo-sin-fondo.png" alt="The Lizeth Store">
-            </a>
+                <a href="#inicio" class="logo">
+                    <img src="./imagenes/marca/logo-sin-fondo.png" alt="The Lizeth Store">
+                </a>
 
-            <nav id="navMenu">
-                <a href="#inicio">Inicio</a>
-                <a href="#joyas">Joyas</a>
-                <a href="#fragancias">Fragancias</a>
-                <a href="#pagos">Formas de pago</a>
-                <a href="#nosotros">Nosotros</a>
-            </nav>
+                <nav id="navMenu">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#joyas">Joyas</a>
+                    <a href="#fragancias">Fragancias</a>
+                    <a href="#pagos">Formas de pago</a>
+                    <a href="#nosotros">Nosotros</a>
+                </nav>
 
-            <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
-        </div>
+            </div>
 
-    </header>
+        </header>
 
 
-    <!-- =========================
+        <!-- =========================
      HERO
 ========================= -->
 
-    <section class="hero" id="inicio">
+        <section class="hero" id="inicio">
 
-        <!-- =====================
-         SLIDE 1
-    ====================== -->
+            <div class="hero-slide slide-1 active"></div>
 
-        <div class="hero-slide slide-1 active"></div>
+            <div class="hero-slide slide-2"></div>
 
+            <div class="hero-content">
 
-        <!-- =====================
-         SLIDE 2
-    ====================== -->
+                <div class="hero-main-content">
 
-        <div class="hero-slide slide-2"></div>
+                    <div class="hero-small">
+                        The Lizeth Store
+                    </div>
 
+                    <h1>
+                        Detalles que<br>
+                        <span>hablan de ti</span>
+                    </h1>
 
-        <!-- =====================
-         CONTENIDO
-    ====================== -->
+                    <p>
+                        Descubre nuestra selección de joyas y fragancias
+                        pensadas para acompañarte en cada momento.
+                    </p>
 
-        <div class="hero-content">
+                    <a href="#catalogo" class="hero-button">
+                        VER CATÁLOGO
+                    </a>
 
-
-            <!-- CONTENIDO ORIGINAL -->
-
-            <div class="hero-main-content">
-
-                <div class="hero-small">
-                    The Lizeth Store
                 </div>
 
-                <h1>
-                    Detalles que<br>
-                    <span>hablan de ti</span>
-                </h1>
+                <div class="hero-new-collection">
 
-                <p>
-                    Descubre nuestra selección de joyas y fragancias
-                    pensadas para acompañarte en cada momento.
-                </p>
+                    <span class="coming-soon">
+                        Próximamente
+                    </span>
 
-                <a href="#catalogo" class="hero-button">
-                    VER CATÁLOGO
+                    <h2>
+                        Nueva Colección<br>
+                        <span>de Joyas</span>
+                    </h2>
+
+                    <p>
+                        Nuevos detalles para hacerte brillar.
+                    </p>
+
+                </div>
+
+                <div class="hero-dots">
+
+                    <button class="hero-dot active" data-slide="0" aria-label="Primera imagen">
+                    </button>
+
+                    <button class="hero-dot" data-slide="1" aria-label="Nueva colección">
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+     CATEGORÍAS
+========================= -->
+
+        <section class="categories">
+
+            <div class="section-title">
+
+                <small>Descubre nuestra colección</small>
+
+                <h2>
+                    Elige tu estilo
+                </h2>
+
+            </div>
+
+
+            <div class="category-grid">
+
+                <a href="#joyas" class="category-card category-jewelry">
+
+                    <div class="category-content">
+
+                        <h3>Joyas</h3>
+
+                        <p>
+                            Detalles delicados para cada ocasión
+                        </p>
+
+                    </div>
+
+                </a>
+
+
+                <a href="#fragancias" class="category-card category-fragrance">
+
+                    <div class="category-content">
+
+                        <h3>Fragancias</h3>
+
+                        <p>
+                            Aromas que dejan huella
+                        </p>
+
+                    </div>
+
                 </a>
 
             </div>
 
+        </section>
+
+
+
+        <!-- =========================
+     CATÁLOGO
+========================= -->
+
+        <section class="products-section" id="catalogo">
+
 
             <!-- =====================
-             NUEVA COLECCIÓN
-        ====================== -->
+         JOYAS
+    ====================== -->
 
-            <div class="hero-new-collection">
+            <div id="joyas">
 
-                <span class="coming-soon">
-                    Coming Soon
+
+                <div class="category-heading">
+
+                    <h2>
+                        ✨ Joyas
+                    </h2>
+
+                    <span>
+                        NUESTRA COLECCIÓN
+                    </span>
+
+                </div>
+
+                <div class="category-description">
+                    Joyas resistentes al agua, hechas en acero inoxidable 316L enchapado en oro 18K
+                </div>
+
+
+
+                <div class="products-grid">
+
+
+                    <!-- PRODUCTO 1 -->
+
+                    <article class="product-card" data-type="joya" data-id="anillo-espiral" data-name="Anillo Espiral"
+                        data-price="S/ 28.00"
+                        data-desc="Diseño en espiral, delicado y ajustable, ideal para el día a día."
+                        data-img1="imagenes/joyas/anillo3.png" data-img2="imagenes/joyas/anillo3a.png">
+
+                        <img src="imagenes/joyas/anillo3.png" alt="Anillo espiral dorado de acero inoxidable 316L"
+                            class="product-image">
+
+                        <div class="product-info">
+
+                            <div class="product-category">
+                                Anillo
+                            </div>
+
+                            <h3 class="product-name">
+                                Anillo Espiral
+                            </h3>
+
+                            <p class="product-description">
+                                Diseño en espiral, delicado y ajustable, ideal para el día a día.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <span class="price">
+                                    S/ 28.00
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCTO 2 -->
+
+                    <article class="product-card" data-type="joya" data-id="pulsera-estrella"
+                        data-name="Pulsera Estrella" data-price="S/ 40.00"
+                        data-desc="Un detalle sutil y femenino para tu día a día."
+                        data-img1="imagenes/joyas/pulsera2.png" data-img2="imagenes/joyas/pulsera2a.png">
+
+                        <img src="imagenes/joyas/pulsera2.png"
+                            alt="Pulsera estrella de acero dorado enchapado en oro 18K" class="product-image">
+
+                        <div class="product-info">
+
+                            <div class="product-category">
+                                Pulsera
+                            </div>
+
+                            <h3 class="product-name">
+                                Pulsera Estrella
+                            </h3>
+
+                            <p class="product-description">
+                                Un detalle sutil y femenino para tu día a día.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <span class="price">
+                                    S/ 40.00
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- PRODUCTO 3 -->
+
+                    <article class="product-card" data-type="joya" data-id="espiral-dorado" data-name="Espiral Dorado"
+                        data-price="S/ 40.00"
+                        data-desc="Collar de cadena fina con dije espiral, perfecto para uso diario."
+                        data-img1="imagenes/joyas/collar1.png" data-img2="imagenes/joyas/collar1a.png">
+
+                        <img src="imagenes/joyas/collar1.png" alt="Collar espiral dorado de acero inoxidable 316L"
+                            class="product-image">
+
+                        <div class="product-info">
+
+                            <div class="product-category">
+                                Collar
+                            </div>
+
+                            <h3 class="product-name">
+                                Espiral Dorado
+                            </h3>
+
+                            <p class="product-description">
+                                Collar de cadena fina con dije espiral, perfecto para uso diario.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <span class="price">
+                                    S/ 40.00
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PRODUCTO 4 -->
+
+                    <article class="product-card" data-type="joya" data-id="infinito-brillante"
+                        data-name="Infinito Brillante" data-price="S/ 28.00"
+                        data-desc="Aretes en forma de infinito, delicados y con brillo sutil."
+                        data-img1="imagenes/joyas/arete3.png" data-img2="imagenes/joyas/arete3a.png">
+
+                        <img src="imagenes/joyas/arete3.png" alt="Aretes infinito brillante de acero inoxidable 316L"
+                            class="product-image">
+
+                        <div class="product-info">
+
+                            <div class="product-category">
+                                Arete
+                            </div>
+
+                            <h3 class="product-name">
+                                Infinito Brillante
+                            </h3>
+
+                            <p class="product-description">
+                                Aretes en forma de infinito, delicados y con brillo sutil.
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <span class="price">
+                                    S/ 28.00
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="separator">
+                <span>✦</span>
+            </div>
+
+
+
+            <!-- =====================
+         FRAGANCIAS
+    ====================== -->
+
+            <div id="fragancias">
+
+                <div class="category-heading">
+
+                    <h2>
+                        🌸 Fragancias
+                    </h2>
+
+                    <span>
+                        NUESTRA COLECCIÓN
+                    </span>
+
+                </div>
+
+                <div class="category-description">
+                    Fragancias importadas 100% originales, directo desde USA
+                </div>
+
+
+                <div class="products-grid">
+
+
+                    <!-- FRAGANCIA 1 -->
+
+                    <article class="product-card" data-type="fragancia" data-id="love-spell" data-name="Love Spell"
+                        data-price="S/ 65.00"
+                        data-desc="Durazno, flor de cerezo y jazmín. El clásico ícono de Victoria's Secret."
+                        data-img1="imagenes/fragancias/love-spell.jpeg" data-img2="imagenes/fragancias/love-spell.jpeg">
+
+                        <img src="imagenes/fragancias/love-spell.jpeg" alt="Victoria's Secret Love Spell"
+                            class="product-image">
+
+                        <div class="product-info">
+
+                            <div class="product-category">
+                                Victoria's Secret
+                            </div>
+
+                            <h3 class="product-name">
+                                Love Spell
+                            </h3>
+
+                            <p class="product-description">
+                                Durazno, flor de cerezo y
+                                jazmín. El clásico ícono VS
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <span class="price">
+                                    S/ 65.00
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- FRAGANCIA 2 -->
+
+                    <article class="product-card" data-type="fragancia" data-id="aqua-kiss" data-name="Aqua Kiss"
+                        data-price="S/ 65.00" data-desc="Melón y cítricos, ligero y energizante, con shimmer."
+                        data-img1="imagenes/fragancias/aqua-kiss.jpeg" data-img2="imagenes/fragancias/aqua-kiss.jpeg">
+
+                        <img src="imagenes/fragancias/aqua-kiss.jpeg" alt="Victoria's Secret Aqua Kiss"
+                            class="product-image">
+
+                        <div class="product-info">
+
+                            <div class="product-category">
+                                Victoria's Secret
+                            </div>
+
+                            <h3 class="product-name">
+                                Aqua Kiss
+                            </h3>
+
+                            <p class="product-description">
+                                Melón y cítricos, ligero y
+                                energizante, con shimmer
+                            </p>
+
+                            <div class="product-bottom">
+
+                                <span class="price">
+                                    S/ 65.00
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+     ¿CÓMO COMPRAR?
+========================= -->
+
+        <section class="how-to-buy-section" id="como-comprar">
+
+            <div class="payment-header">
+
+                <span>
+                    THE LIZETH STORE
                 </span>
 
                 <h2>
-                    Nueva Colección<br>
-                    <span>de Joyas</span>
+                    ¿Cómo comprar?
                 </h2>
 
                 <p>
-                    Nuevos detalles para hacerte brillar.
+                    Así de fácil es tener tu pedido en camino
+                </p>
+
+            </div>
+
+            <div class="how-to-buy-grid">
+
+                <div class="how-to-buy-step">
+                    <span class="step-number">1</span>
+                    <h3>Elige tu producto</h3>
+                    <p>Explora joyas y fragancias, y elige tu favorito.</p>
+                </div>
+
+                <div class="how-to-buy-step">
+                    <span class="step-number">2</span>
+                    <h3>Escríbenos por WhatsApp</h3>
+                    <p>Pulsa "Pedir por WhatsApp" y cuéntanos qué te gustó.</p>
+                </div>
+
+                <div class="how-to-buy-step">
+                    <span class="step-number">3</span>
+                    <h3>Paga con los datos que te enviamos</h3>
+                    <p>Confirmamos stock y te enviamos los datos de pago.</p>
+                </div>
+
+                <div class="how-to-buy-step">
+                    <span class="step-number">4</span>
+                    <h3>Recibe tu pedido</h3>
+                    <p>Coordinamos el envío y ¡listo!</p>
+                </div>
+
+            </div>
+
+            <p class="shipping-note">
+                🚚 Envíos por Shalom: <strong>S/ 5.00 adicionales</strong>, previa coordinación.
+            </p>
+
+            <!-- TODO Thalia: confirma tu horario real de atención para reemplazar esta línea -->
+            <p class="attention-hours">
+                🕐 Horario de atención: <strong>Lunes a Sábados de 9 AM a 10 PM</strong>
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+     FORMAS DE PAGO
+========================= -->
+
+        <section class="payment-section" id="pagos">
+
+            <div class="payment-header">
+
+                <span>
+                    THE LIZETH STORE
+                </span>
+
+                <h2>
+                    Formas de pago
+                </h2>
+
+                <p>
+                    Te enviamos los datos al confirmar tu pedido
                 </p>
 
             </div>
 
 
-            <!-- =====================
-             PUNTITOS
-        ====================== -->
-
-            <div class="hero-dots">
-
-                <button class="hero-dot active" data-slide="0" aria-label="Primera imagen">
-                </button>
-
-                <button class="hero-dot" data-slide="1" aria-label="Nueva colección">
-                </button>
-
-            </div>
-
-        </div>
-
-    </section>
+            <div class="payment-container payment-container-simple">
 
 
-    <!-- =========================
-     CATEGORÍAS
-========================= -->
+                <!-- YAPE / PLIN -->
 
-    <section class="categories">
+                <div class="payment-card payment-card-simple">
 
-        <div class="section-title">
+                    <div class="payment-logos">
 
-            <small>Descubre nuestra colección</small>
+                        <div class="payment-icon">
+                            <img src="imagenes/redes/yape-app-logo-png_seeklogo-399697.png" alt="Logo de Yape">
+                        </div>
 
-            <h2>
-                Elige tu estilo
-            </h2>
+                        <div class="payment-icon">
+                            <img src="imagenes/redes/plin-logo-png_seeklogo-386806.png" alt="Logo de Plin">
+                        </div>
 
-        </div>
+                    </div>
 
+                    <h3>Yape / Plin</h3>
 
-        <div class="category-grid">
+                    <p class="payment-note">Te enviamos los datos al confirmar tu pedido</p>
 
-            <a href="#joyas" class="category-card category-jewelry">
-
-                <div class="category-content">
-
-                    <h3>Joyas</h3>
-
-                    <p>
-                        Detalles delicados para cada ocasión
-                    </p>
+                    <a class="whatsapp-btn"
+                        href="https://wa.me/51907134693?text=Hola%2C%20quiero%20pagar%20con%20Yape%20o%20Plin%2C%20%C2%BFme%20env%C3%ADas%20los%20datos%3F"
+                        target="_blank">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                            <path
+                                d="M12.05 2C6.505 2 2 6.505 2 12.05c0 1.89.516 3.66 1.41 5.176L2 22l4.94-1.377A9.98 9.98 0 0 0 12.05 22.1C17.596 22.1 22.1 17.596 22.1 12.05 22.1 6.505 17.596 2 12.05 2zm0 18.267a8.184 8.184 0 0 1-4.176-1.145l-.3-.178-3.098.864.83-3.02-.196-.31a8.19 8.19 0 0 1-1.264-4.428c0-4.522 3.68-8.202 8.204-8.202 4.522 0 8.202 3.68 8.202 8.202 0 4.523-3.68 8.217-8.202 8.217z" />
+                        </svg>
+                        Pedir datos por WhatsApp
+                    </a>
 
                 </div>
 
-            </a>
 
+                <!-- BCP -->
 
-            <a href="#fragancias" class="category-card category-fragrance">
+                <div class="payment-card payment-card-simple">
 
-                <div class="category-content">
+                    <div class="payment-logos">
 
-                    <h3>Fragancias</h3>
-
-                    <p>
-                        Aromas que dejan huella
-                    </p>
-
-                </div>
-
-            </a>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-     CATÁLOGO
-========================= -->
-
-    <section class="products-section" id="catalogo">
-
-
-        <!-- =====================
-         JOYAS
-    ====================== -->
-
-        <div id="joyas">
-
-
-            <div class="category-heading">
-
-                <h2>
-                    ✨ Joyas
-                </h2>
-
-                <span>
-                    NUESTRA COLECCIÓN
-                </span>
-
-            </div>
-
-            <div class="category-description">
-                Joyas Waterproof hechas con verdadero acero inoxidable 316L enchapados de oro de 18K, resistentes al
-                agua
-            </div>
-
-
-
-            <div class="products-grid">
-
-
-                <!-- PRODUCTO 1 -->
-
-                <article class="product-card">
-
-                    <img src="imagenes/joyas/anillo3.png" alt="Aretes plateados" class="product-image">
-
-                    <div class="product-info">
-
-                        <div class="product-category">
-                            anillo
-                        </div>
-
-                        <h3 class="product-name">
-                            Anillo Espiral
-                        </h3>
-
-                        <p class="product-description">
-                            Diseño delicado y elegante para complementar
-                            cualquier look.
-                        </p>
-
-                        <button class="view-button" data-name="Anillo Espiral" data-price="S/ 28.00"
-                            data-desc="Diseño delicado y elegante para complementar cualquier look."
-                            data-img1="imagenes/joyas/anillo3.png" data-img2="imagenes/joyas/anillo3a.png"
-                            data-whatsapp="https://wa.me/message/7WWDAJ33MPKTO1?text=Hola%2C%20estoy%20interesada%20en%20los%20Aretes%20Elegance">
-                            VER MÁS
-                        </button>
-
-                        <div class="product-bottom">
-
-                            <span class="price">
-                                S/ 28.00
-                            </span>
-
-                            <a class="buy-button-item" href="#" target="_blank">
-                                CONSULTAR
-                            </a>
-
+                        <div class="payment-icon bcp">
+                            <img src="imagenes/redes/images.png" alt="Logo de BCP">
                         </div>
 
                     </div>
 
-                </article>
-
-
-                <!-- PRODUCTO 3 -->
-
-                <article class="product-card">
-
-                    <img src="imagenes/joyas/pulsera2.png" alt="Pulsera" class="product-image">
-
-                    <div class="product-info">
-
-                        <div class="product-category">
-                            Pulseras
-                        </div>
-
-                        <h3 class="product-name">
-                            Pulsera Estrella
-                        </h3>
-
-                        <p class="product-description">
-                            Un detalle sutil y femenino para tu día a día.
-                        </p>
-
-                        <button class="view-button" data-name="Pulsera Estrella" data-price="S/ 40.00"
-                            data-desc="Un detalle sutil y femenino para tu día a día."
-                            data-img1="imagenes/joyas/pulsera2.png" data-img2="imagenes/joyas/pulsera2a.png"
-                            data-whatsapp="https://wa.me/message/7WWDAJ33MPKTO1?text=Hola%2C%20estoy%20interesada%20en%20la%20Pulsera%20Shine">
-                            VER MÁS
-                        </button>
-
-                        <div class="product-bottom">
-
-                            <span class="price">
-                                S/ 40.00
-                            </span>
-
-                            <a class="buy-button-item" href="#" target="_blank">
-                                CONSULTAR
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- PRODUCTO 4 -->
-
-                <article class="product-card">
-
-                    <img src="imagenes/joyas/collar1.png" alt="Anillo" class="product-image">
-
-                    <div class="product-info">
-
-                        <div class="product-category">
-                            collar
-                        </div>
-
-                        <h3 class="product-name">
-                            Espiral Dorado
-                        </h3>
-
-                        <p class="product-description">
-                            Elegante y femenino para cualquier ocasión.
-                        </p>
-
-                        <button class="view-button" data-name="Espiral Dorado" data-price="S/ 40.00"
-                            data-desc="Elegante y femenino para cualquier ocasión."
-                            data-img1="imagenes/joyas/collar1.png" data-img2="imagenes/joyas/collar1a.png"
-                            data-whatsapp="https://wa.me/message/7WWDAJ33MPKTO1?text=Hola%2C%20estoy%20interesada%20en%20el%20Anillo%20Love">
-                            VER MÁS
-                        </button>
-
-                        <div class="product-bottom">
-
-                            <span class="price">
-                                S/ 40.00
-                            </span>
-
-                            <a class="buy-button-item" href="#" target="_blank">
-                                CONSULTAR
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- PRODUCTO 6 -->
-                <!-- 
-                <article class="product-card">
-
-                    <img src="imagenes/joyas/arete3.png" alt="Anillo" class="product-image">
-
-                    <div class="product-info">
-
-                        <div class="product-category">
-                            arete
-                        </div>
-
-                        <h3 class="product-name">
-                            Infinito Brillante
-                        </h3>
-
-                        <p class="product-description">
-                            Elegante y femenino para cualquier ocasión.
-                        </p>
-
-                        <button class="view-button" data-name="Infinito Brillante" data-price="S/ 28.00"
-                            data-desc="Elegante y femenino para cualquier ocasión."
-                            data-img1="imagenes/joyas/arete3.png" data-img2="imagenes/joyas/arete3a.png"
-                            data-whatsapp="https://wa.me/message/7WWDAJ33MPKTO1?text=Hola%2C%20estoy%20interesada%20en%20el%20Anillo%20Love">
-                            VER MÁS
-                        </button>
-
-                        <div class="product-bottom">
-
-                            <span class="price">
-                                S/ 28.00
-                            </span>
-
-                            <a class="buy-button-item"
-                                href="#"
-                                target="_blank">
-                                CONSULTAR
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-                -->
-            </div>
-
-        </div>
-
-
-
-        <div class="separator">
-            <span>✦</span>
-        </div>
-
-
-
-        <!-- =====================
-         FRAGANCIAS
-    ====================== -->
-
-        <div id="fragancias">
-
-            <div class="category-heading">
-
-                <h2>
-                    🌸 Fragancias
-                </h2>
-
-                <span>
-                    NUESTRA COLECCIÓN
-                </span>
-
-            </div>
-
-            <div class="category-description">
-                Fragancias importadas 100% originales, directo desde USA
-            </div>
-
-
-            <div class="products-grid">
-
-
-                <!-- BARE VANILLA -->
-                <!--
-                <article class="product-card">
-
-                    <img src="imagenes/fragancias/bare-vainilla.jpeg" alt="Victoria's Secret Bare Vanilla"
-                        class="product-image">
-
-                    <div class="product-info">
-
-                        <div class="product-category">
-                            Victoria's Secret
-                        </div>
-
-                        <h3 class="product-name">
-                            Fragancia Bare Vanilla
-                        </h3>
-
-                        <p class="product-description">
-                            Fragancia cálida, dulce y envolvente.
-                        </p>
-
-                        <div class="product-bottom">
-
-                            <span class="price">
-                                S/ 65.00
-                            </span>
-
-                            <a class="buy-button-item" href="#" target="_blank">
-                                CONSULTAR
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-                -->
-
-                <!-- FRAGANCIA 3 -->
-
-                <article class="product-card">
-
-                    <img src="imagenes/fragancias/love-spell.jpeg" alt="Fragancia" class="product-image">
-
-                    <div class="product-info">
-
-                        <div class="product-category">
-                            Victoria's Secret
-                        </div>
-
-                        <h3 class="product-name">
-                            Fragancia Love Spell
-                        </h3>
-
-                        <p class="product-description">
-                            Durazno, flor de cerezo y
-                            jazmín. El clásico ícono VS
-                        </p>
-
-                        <div class="product-bottom">
-
-                            <span class="price">
-                                S/ 65.00
-                            </span>
-
-                            <a class="buy-button-item" href="#" target="_blank">
-                                CONSULTAR
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- FRAGANCIA 5 -->
-
-                <article class="product-card">
-
-                    <img src="imagenes/fragancias/aqua-kiss.jpeg" alt="Fragancia" class="product-image">
-
-                    <div class="product-info">
-
-                        <div class="product-category">
-                            Victoria's Secret
-                        </div>
-
-                        <h3 class="product-name">
-                            Fragancia Aqua Kiss
-                        </h3>
-
-                        <p class="product-description">
-                            Melón y cítricos, ligero y
-                            energizante, con shimmer
-                        </p>
-
-                        <div class="product-bottom">
-
-                            <span class="price">
-                                S/ 65.00
-                            </span>
-
-                            <a class="buy-button-item" href="#" target="_blank">
-                                CONSULTAR
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-                <!-- FRAGANCIA 2 -->
-                <!--
-                <article class="product-card">
-
-                    <img src="imagenes/fragancias/bare-vainilla-crema.jpeg" alt="Fragancia" class="product-image">
-
-                    <div class="product-info">
-
-                        <div class="product-category">
-                            Victoria's Secret
-                        </div>
-
-                        <h3 class="product-name">
-                            Crema Bare Vainilla
-                        </h3>
-
-                        <p class="product-description">
-                            Crema corporal hidratante
-                            con el mismo aroma dulce
-                        </p>
-
-                        <div class="product-bottom">
-
-                            <span class="price">
-                                S/ 65.00
-                            </span>
-
-                            <a class="buy-button-item" href="#" target="_blank">
-                                CONSULTAR
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-                -->
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- =========================
-     FORMAS DE PAGO
-========================= -->
-
-    <section class="payment-section" id="pagos">
-
-        <div class="payment-header">
-
-            <span>
-                THE LIZETH STORE
-            </span>
-
-            <h2>
-                Formas de pago
-            </h2>
-
-            <p>
-                Realiza tu pago de manera segura
-            </p>
-
-        </div>
-
-
-        <div class="payment-container">
-
-
-            <!-- YAPE / PLIN -->
-
-            <div class="payment-card">
-
-                <div class="payment-icon">
-                    <img src="imagenes/redes/yape-app-logo-png_seeklogo-399697.png" alt="yape" class="payment-icon">
-                </div>
-
-                <div class="payment-icon">
-                    <img src="imagenes/redes/plin-logo-png_seeklogo-386806.png" alt="plin" class="payment-icon">
-                </div>
-
-
-                <div class="payment-info">
-
-                    <h3>
-                        Pago con Yape / Plin ♡
-                    </h3>
-
-                    <div class="payment-number">
-                        904 130 802
-                    </div>
-
-                    <div class="payment-label">
-                        Titular
-                    </div>
-
-                    <p>
-                        THALIA LIZETH PIZARRO CALUMANI
-                    </p>
+                    <h3>Transferencia BCP</h3>
+
+                    <p class="payment-note">Te enviamos cuenta y CCI al confirmar tu pedido</p>
+
+                    <a class="whatsapp-btn"
+                        href="https://wa.me/51907134693?text=Hola%2C%20quiero%20pagar%20por%20transferencia%20BCP%2C%20%C2%BFme%20env%C3%ADas%20los%20datos%3F"
+                        target="_blank">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                            <path
+                                d="M12.05 2C6.505 2 2 6.505 2 12.05c0 1.89.516 3.66 1.41 5.176L2 22l4.94-1.377A9.98 9.98 0 0 0 12.05 22.1C17.596 22.1 22.1 17.596 22.1 12.05 22.1 6.505 17.596 2 12.05 2zm0 18.267a8.184 8.184 0 0 1-4.176-1.145l-.3-.178-3.098.864.83-3.02-.196-.31a8.19 8.19 0 0 1-1.264-4.428c0-4.522 3.68-8.202 8.204-8.202 4.522 0 8.202 3.68 8.202 8.202 0 4.523-3.68 8.217-8.202 8.217z" />
+                        </svg>
+                        Pedir datos por WhatsApp
+                    </a>
 
                 </div>
 
             </div>
 
 
-            <!-- BCP -->
+            <div class="payment-thanks">
 
-            <div class="payment-card">
-
-                <div class="payment-icon bcp">
-                    <img src="imagenes/redes/images.png" alt="bcp" class="payment-icon">
-                </div>
-
-                <div class="payment-info">
-
-                    <h3>
-                        Transferencia bancaria BCP ♡
-                    </h3>
-
-                    <div class="bank-row">
-
-                        <span>
-                            Número de Cuenta (Soles)
-                        </span>
-
-                        <span class="copy-wrapper">
-                            <strong>19172914642051</strong>
-                            <button class="copy-btn" data-copy="19172914642051" aria-label="Copiar número de cuenta">
-                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <rect x="9" y="9" width="13" height="13" rx="2" />
-                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                                </svg>
-                            </button>
-                        </span>
-
-
-                    </div>
-
-                    <div class="bank-row">
-
-                        <span>
-                            CCI (Código Interbancario)
-                        </span>
-
-                        <span class="copy-wrapper">
-                            <strong>00219117291464205151</strong>
-                            <button class="copy-btn" data-copy="00219117291464205151" aria-label="Copiar CCI">
-                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <rect x="9" y="9" width="13" height="13" rx="2" />
-                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
-                                </svg>
-                            </button>
-                        </span>
-
-                    </div>
-
-                </div>
+                <em>
+                    ¡Gracias por tu confianza!
+                </em>
 
             </div>
 
-        </div>
+        </section>
 
-
-        <div class="payment-thanks">
-
-            <em>
-                ¡Gracias por tu confianza!
-            </em>
-
-        </div>
-
-    </section>
-
-    <!-- =========================
+        <!-- =========================
      NOSOTROS
 ========================= -->
 
-    <section class="about" id="nosotros">
+        <section class="about" id="nosotros">
 
-        <div class="about-content">
+            <div class="about-content">
 
-            <h2>
-                ✦ The Lizeth Store ✦
-            </h2>
+                <h2>
+                    ✦ The Lizeth Store ✦
+                </h2>
 
-            <p>
-                Un espacio creado para encontrar esos pequeños detalles
-                que hacen especial cada momento. Productos cuidadosamente elegidos para ti.
-                <br>
-                <br>
-                The Lizeth Store nace para chicas que aman rodearse de cosas lindas y cuidadosamente elegidas. Aquí
-                encontrarás joyas en acero quirúrgico 316L con enchape de oro 18k, resistentes al agua y pensadas para
-                durar, además de fragancias y productos de cuidado personal 100% originales, traídos directamente desde
-                Estados Unidos.
-                <br>
-                <br>
-                Cada pieza que ves aquí pasa por un proceso de selección cuidadoso, porque quiero que lo que llega a tus
-                manos sea exactamente lo que promete: calidad real, sin sorpresas.
-                <br>
-                <br>
-                Hecho con cariño, para las que se atreven a brillar a su manera. 🤍✨
-            </p>
+                <p>
+                    Bienvenida a un espacio creado para encontrar esos pequeños detalles
+                    que hacen especial cada momento. Aquí vas a encontrar productos cuidadosamente elegidos para ti.
+                    <br>
+                    <br>
+                    Creé The Lizeth Store para chicas que aman rodearse de cosas lindas y cuidadosamente elegidas: joyas
+                    en acero inoxidable 316L enchapado en oro 18K, resistentes al agua y pensadas para durar, además de
+                    fragancias y productos de cuidado personal 100% originales, traídos directamente desde Estados
+                    Unidos.
+                    <br>
+                    <br>
+                    Cada pieza que ves aquí pasa por un proceso de selección cuidadoso, porque quiero que lo que llega a
+                    tus
+                    manos sea exactamente lo que promete: calidad real, sin sorpresas.
+                    <br>
+                    <br>
+                    Hecho con cariño, para las que se atreven a brillar a su manera. 🤍✨
+                </p>
 
-        </div>
+            </div>
 
-    </section>
+        </section>
 
 
-    <!-- =========================
+        <!-- =========================
      CONTADOR DE VISITAS
 ========================= -->
 
-    <section class="visit-counter-section">
+        <section class="visit-counter-section">
 
-        <div class="visit-line"></div>
+            <div class="visit-line"></div>
 
-        <span class="visit-number" id="visitCount">...</span>
+            <span class="visit-number" id="visitCount">...</span>
 
-        <span class="visit-label">Visitas a nuestra tienda</span>
+            <span class="visit-label">Visitas a nuestra tienda</span>
+
+        </section>
 
 
-    </section>
-
-
-    <!-- =========================
+        <!-- =========================
      FOOTER
 ========================= -->
 
-    <footer>
+        <footer>
 
-        <div class="footer-logo">
-            <div class="footer-logo-container">
-                <img src="/imagenes/marca/logo-lading.png" alt="The Lizeth Store">
+            <div class="footer-logo">
+                <div class="footer-logo-container">
+                    <img src="/imagenes/marca/logo-lading.png" alt="The Lizeth Store">
+                </div>
+
             </div>
 
-        </div>
 
+            <div class="social">
 
-        <div class="social">
+                <a href="https://www.instagram.com/the.lizeth.store/" target="_blank"
+                    aria-label="Instagram de The Lizeth Store">
+                    <svg viewBox="0 0 24 24" width="50" height="50" fill="white">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                </a>
 
-            <a href="https://www.instagram.com/the.lizeth.store/" target="_blank">
-                <svg viewBox="0 0 24 24" width="50" height="50" fill="white">
-                    <path
-                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg>
-            </a>
+                <a href="https://www.facebook.com/profile.php?id=61593919891451" target="_blank"
+                    aria-label="Facebook de The Lizeth Store">
+                    <svg viewBox="0 0 24 24" width="54" height="54" fill="white">
+                        <path
+                            d="M22 12.061C22 6.505 17.523 2 12 2S2 6.505 2 12.061c0 5.022 3.657 9.184 8.438 9.939v-7.03H7.898v-2.909h2.54V9.845c0-2.522 1.492-3.915 3.777-3.915 1.094 0 2.238.197 2.238.197v2.476h-1.26c-1.243 0-1.63.775-1.63 1.57v1.888h2.773l-.443 2.909h-2.33V22c4.78-.755 8.437-4.917 8.437-9.939z" />
+                    </svg>
+                </a>
 
-            <a href="https://www.facebook.com/profile.php?id=61593919891451" target="_blank">
-                <svg viewBox="0 0 24 24" width="54" height="54" fill="white">
-                    <path
-                        d="M22 12.061C22 6.505 17.523 2 12 2S2 6.505 2 12.061c0 5.022 3.657 9.184 8.438 9.939v-7.03H7.898v-2.909h2.54V9.845c0-2.522 1.492-3.915 3.777-3.915 1.094 0 2.238.197 2.238.197v2.476h-1.26c-1.243 0-1.63.775-1.63 1.57v1.888h2.773l-.443 2.909h-2.33V22c4.78-.755 8.437-4.917 8.437-9.939z" />
-                </svg>
-            </a>
+                <a href="https://www.tiktok.com/@the.lizeth.store" target="_blank"
+                    aria-label="TikTok de The Lizeth Store">
+                    <svg viewBox="0 0 24 24" width="50" height="50" fill="white">
+                        <path
+                            d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z" />
+                    </svg>
+                </a>
 
-            <a href="https://www.tiktok.com/@the.lizeth.store" target="_blank">
-                <svg viewBox="0 0 24 24" width="50" height="50" fill="white">
-                    <path
-                        d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z" />
-                </svg>
-            </a>
+            </div>
 
-        </div>
+            <div class="copyright">
+                © 2026 The Lizeth Store · Todos los derechos reservados
+            </div>
 
-        <div class="copyright">
-            © 2026 The Lizeth Store · Todos los derechos reservados
-        </div>
-
-    </footer>
-
+        </footer>
+    </div>
 
 
     <!-- =========================
      WHATSAPP
 ========================= -->
 
-    <a class="whatsapp" href="https://wa.me/message/7WWDAJ33MPKTO1" target="_blank" aria-label="WhatsApp">
+    <a class="whatsapp"
+        href="https://wa.me/51907134693?text=%C2%A1Hola!%20%F0%9F%92%95%F0%9F%8E%80%20me%20interesa%20uno%20de%20tus%20productos%20%E2%98%BA%EF%B8%8F"
+        target="_blank" aria-label="Escríbenos por WhatsApp">
         <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
             <path
                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
@@ -852,6 +758,12 @@
                 d="M12.05 2C6.505 2 2 6.505 2 12.05c0 1.89.516 3.66 1.41 5.176L2 22l4.94-1.377A9.98 9.98 0 0 0 12.05 22.1C17.596 22.1 22.1 17.596 22.1 12.05 22.1 6.505 17.596 2 12.05 2zm0 18.267a8.184 8.184 0 0 1-4.176-1.145l-.3-.178-3.098.864.83-3.02-.196-.31a8.19 8.19 0 0 1-1.264-4.428c0-4.522 3.68-8.202 8.204-8.202 4.522 0 8.202 3.68 8.202 8.202 0 4.523-3.68 8.217-8.202 8.217z" />
         </svg>
     </a>
+
+
+    <!-- =========================
+     VISTA DE DETALLE DEL PRODUCTO
+========================= -->
+
     <div class="product-modal" id="productModal">
 
         <div class="product-modal-overlay" id="modalOverlay"></div>
@@ -865,43 +777,61 @@
                 </svg>
             </button>
 
-            <div class="modal-gallery">
+            <div class="modal-main">
 
-                <div class="modal-slide active" data-slide="0">
-                    <img id="modalImg1" src="" alt="">
+                <div class="modal-gallery">
+
+                    <div class="modal-slide active" data-slide="0">
+                        <img id="modalImg1" src="" alt="">
+                    </div>
+
+                    <div class="modal-slide" data-slide="1">
+                        <img id="modalImg2" src="" alt="">
+                    </div>
+
+                    <div class="modal-dots">
+                        <button class="modal-dot active" data-slide="0" aria-label="Foto 1"></button>
+                        <button class="modal-dot" data-slide="1" aria-label="Foto 2"></button>
+                    </div>
+
                 </div>
 
-                <div class="modal-slide" data-slide="1">
-                    <img id="modalImg2" src="" alt="">
-                </div>
+                <div class="modal-info">
 
-                <div class="modal-dots">
-                    <button class="modal-dot active" data-slide="0" aria-label="Foto 1"></button>
-                    <button class="modal-dot" data-slide="1" aria-label="Foto 2"></button>
+                    <h3 id="modalName"></h3>
+
+                    <span class="modal-price" id="modalPrice"></span>
+
+                    <p id="modalDesc"></p>
+
+                    <a class="whatsapp-btn" id="modalConsultar" target="_blank">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                            <path
+                                d="M12.05 2C6.505 2 2 6.505 2 12.05c0 1.89.516 3.66 1.41 5.176L2 22l4.94-1.377A9.98 9.98 0 0 0 12.05 22.1C17.596 22.1 22.1 17.596 22.1 12.05 22.1 6.505 17.596 2 12.05 2zm0 18.267a8.184 8.184 0 0 1-4.176-1.145l-.3-.178-3.098.864.83-3.02-.196-.31a8.19 8.19 0 0 1-1.264-4.428c0-4.522 3.68-8.202 8.204-8.202 4.522 0 8.202 3.68 8.202 8.202 0 4.523-3.68 8.217-8.202 8.217z" />
+                        </svg>
+                        Pedir por WhatsApp
+                    </a>
+
                 </div>
 
             </div>
 
-            <div class="modal-info">
+            <div class="related-section">
 
-                <h3 id="modalName"></h3>
+                <h4>También te puede interesar</h4>
 
-                <span class="modal-price" id="modalPrice"></span>
-
-                <p id="modalDesc"></p>
-
-                <a class="buy-button modal-consultar" id="modalConsultar" target="_blank">
-                    CONSULTAR
-                </a>
+                <div class="related-grid" id="relatedGrid"></div>
 
             </div>
 
         </div>
 
     </div>
+
     <script type="module" src="js/counter.js"></script>
-    <script src="js/product-modal.js"></script>
-    <script src="js/product-links.js"></script>
+    <script src="js/product-detail.js"></script>
     <script src="js/main.js"></script>
 
 </body>
