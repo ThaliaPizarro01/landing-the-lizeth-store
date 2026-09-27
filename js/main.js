@@ -50,6 +50,9 @@ const heroDots = document.querySelectorAll('.hero-dot');
 
 const heroMainContent = document.querySelector('.hero-main-content');
 const heroNewCollection = document.querySelector('.hero-new-collection');
+const heroDiscount = document.querySelector('.hero-discount');
+
+const heroContentByIndex = [heroMainContent, heroNewCollection, heroDiscount];
 
 let currentSlide = 0;
 
@@ -74,21 +77,16 @@ function showSlide(index) {
     heroDots[index].classList.add('active');
 
 
-    /* Cambiar texto */
+    /* Cambiar texto: se muestra solo el bloque que
+       corresponde al slide actual */
 
-    if (index === 1) {
+    heroContentByIndex.forEach((content, i) => {
 
-        heroMainContent.style.display = 'none';
+        if (!content) return;
 
-        heroNewCollection.style.display = 'block';
+        content.style.display = (i === index) ? 'block' : 'none';
 
-    } else {
-
-        heroMainContent.style.display = 'block';
-
-        heroNewCollection.style.display = 'none';
-
-    }
+    });
 
 
     currentSlide = index;

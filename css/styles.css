@@ -31,6 +31,8 @@
 
     --whatsapp: #25D366;
     --whatsapp-dark: #1ebe5d;
+
+    --rojo-descuento: #d64545;
 }
 
 html {
@@ -230,6 +232,16 @@ nav a:hover {
         url("https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1800&q=80");
 }
 
+.hero-slide.slide-3 {
+    background-image:
+        linear-gradient(rgba(249, 239, 241, 0.65),
+            rgba(250, 247, 242, 0.88)),
+        url("/imagenes/redes/banner3.png");
+    /* background:
+        radial-gradient(circle at 30% 30%, rgba(213, 169, 92, 0.25), transparent 60%),
+        linear-gradient(135deg, var(--rosa-palido), var(--rosa-claro)); */
+}
+
 .hero-slide.active {
     opacity: 1;
 }
@@ -292,6 +304,71 @@ nav a:hover {
 
 .hero-main-content {
     display: block;
+}
+
+/* =========================
+   TEXTO DEL TERCER SLIDE
+   (OFERTA 10%)
+========================= */
+ 
+.hero-discount {
+    display: none;
+ 
+    margin-bottom: 25px;
+}
+ 
+.hero-discount .limited-offer {
+    display: inline-block;
+ 
+    padding: 6px 18px;
+ 
+    font-size: 12px;
+ 
+    letter-spacing: 3px;
+ 
+    text-transform: uppercase;
+ 
+    color: white;
+ 
+    background: var(--rojo-descuento);
+ 
+    border-radius: 30px;
+ 
+    margin-bottom: 18px;
+}
+ 
+.hero-discount h2 {
+    font-family: "Cormorant Garamond", serif;
+ 
+    font-size: clamp(50px, 7vw, 82px);
+ 
+    line-height: 0.95;
+ 
+    font-weight: 600;
+ 
+    color: var(--texto);
+ 
+    margin-bottom: 18px;
+}
+ 
+.hero-discount h2 span {
+    color: var(--dorado);
+}
+ 
+.hero-discount p {
+    font-size: 15px;
+ 
+    letter-spacing: 1px;
+ 
+    color: var(--texto-suave);
+}
+ 
+.hero-button-discount {
+    border-color: var(--rojo-descuento);
+}
+ 
+.hero-button-discount:hover {
+    background: var(--rojo-descuento);
 }
 
 
@@ -562,6 +639,8 @@ nav a:hover {
 }
 
 .product-card {
+    position: relative;
+
     background: white;
 
     border-radius: 5px;
@@ -631,11 +710,53 @@ nav a:hover {
 }
 
 .price {
+    display: inline-flex;
+
+    align-items: baseline;
+
+    gap: 8px;
+
     font-size: 16px;
 
     font-weight: 600;
 
     color: var(--texto);
+}
+
+
+/* =========================
+   DESCUENTO
+========================= */
+
+.discount-badge {
+    position: absolute;
+
+    top: 8px;
+    right: 8px;
+
+    width: 90px;
+    height: 90px;
+
+    z-index: 5;
+
+    pointer-events: none;
+}
+
+.price-original {
+    text-decoration: line-through;
+
+    color: var(--rojo-descuento);
+
+    font-size: 13px;
+    font-weight: 500;
+
+    opacity: 0.85;
+}
+
+.price-discounted {
+    color: var(--dorado);
+
+    font-weight: 700;
 }
 
 
@@ -1327,6 +1448,14 @@ footer p {
     background: var(--rosa-suave);
 }
 
+.modal-gallery .discount-badge {
+    top: 14px;
+    right: 14px;
+
+    width: 90px;
+    height: 90px;
+}
+
 .modal-slide {
     position: absolute;
     inset: 0;
@@ -1402,6 +1531,12 @@ footer p {
 }
 
 .modal-price {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 10px;
+
     font-size: 25px;
 
     font-weight: 600;
@@ -1409,6 +1544,14 @@ footer p {
     color: var(--dorado);
 
     margin-bottom: 8px;
+}
+
+.modal-price .price-original {
+    font-size: 16px;
+}
+
+.modal-price .price-discounted {
+    font-size: 25px;
 }
 
 .modal-info h3 {
@@ -1457,6 +1600,8 @@ footer p {
 }
 
 .related-card {
+    position: relative;
+
     min-width: 130px;
     max-width: 130px;
 
@@ -1497,6 +1642,12 @@ footer p {
 }
 
 .related-price {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 5px;
+
     font-size: 11px;
 
     font-weight: 600;
@@ -1504,6 +1655,11 @@ footer p {
     padding: 0 8px 8px;
 
     color: var(--dorado);
+}
+
+.related-price .price-original,
+.related-price .price-discounted {
+    font-size: 10px;
 }
 
 
@@ -1558,6 +1714,10 @@ footer p {
 
     .modal-info h3 {
         font-size: 28px;
+    }
+
+    .modal-price {
+        justify-content: center;
     }
 
     .whatsapp-btn {
@@ -1684,5 +1844,19 @@ footer p {
     .how-to-buy-grid {
         grid-template-columns: 1fr;
     }
+
+    .discount-badge {
+        width: 60px;
+        height: 60px;
+    }
+
+    .modal-gallery .discount-badge {
+    top: 60px;
+    right: 20px;
+
+    width: 90px;
+    height: 90px;
+}
+
 
 }

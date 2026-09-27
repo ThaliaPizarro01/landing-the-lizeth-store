@@ -5,7 +5,7 @@
 
 (function () {
 
-    const WHATSAPP_NUMBER = "51907134693";
+    const WHATSAPP_NUMBER = "51904130802";
 
     const productModal = document.getElementById('productModal');
     const modalOverlay = document.getElementById('modalOverlay');
@@ -88,10 +88,14 @@
             const relCard = document.createElement('div');
             relCard.className = 'related-card';
 
+            const relatedPriceHTML = window.PriceDiscount
+                ? window.PriceDiscount.renderPriceHTML(related.price)
+                : related.price;
+
             relCard.innerHTML = `
                 <img src="${related.img1}" alt="${related.name}">
                 <div class="related-name">${related.name}</div>
-                <div class="related-price">${related.price}</div>
+                <div class="related-price">${relatedPriceHTML}</div>
             `;
 
             relCard.addEventListener('click', () => {
@@ -114,9 +118,17 @@
 
         modalName.textContent = product.name;
         modalDesc.textContent = product.desc;
-        modalPrice.textContent = product.price;
 
-        const message = `Hola ✨🩷, quiero saber más sobre este producto: ${product.name}`;
+        modalPrice.innerHTML = window.PriceDiscount
+            ? window.PriceDiscount.renderPriceHTML(product.price)
+            : product.price;
+
+        const modalGallery = document.querySelector('.modal-gallery');
+        if (window.PriceDiscount) {
+            window.PriceDiscount.applyDiscountBadge(modalGallery);
+        }
+
+        const message = `Hola, quiero saber más sobre este producto: ${product.name}`;
         modalConsultar.href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
         renderRelated(product);
