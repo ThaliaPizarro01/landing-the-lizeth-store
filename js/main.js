@@ -146,3 +146,53 @@ heroDots.forEach(dot => {
     });
 
 });
+
+// =========================================
+// FILTRO DE JOYAS
+// =========================================
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    var jewelryFilters = document.querySelectorAll('.jewelry-filter');
+    var jewelryProducts = document.querySelectorAll('#joyas .product-card');
+
+    if (!jewelryFilters.length || !jewelryProducts.length) {
+        return;
+    }
+
+    jewelryFilters.forEach(function (button) {
+
+        button.addEventListener('click', function () {
+
+            var selectedFilter = this.getAttribute('data-filter');
+
+            // Cambiar botón activo
+            jewelryFilters.forEach(function (filterButton) {
+                filterButton.classList.remove('active');
+            });
+
+            this.classList.add('active');
+
+            // Filtrar productos
+            jewelryProducts.forEach(function (product) {
+
+                var categories = product.getAttribute('data-category') || '';
+
+                categories = categories.toLowerCase().split(' ');
+
+                if (
+                    selectedFilter === 'todos' ||
+                    categories.indexOf(selectedFilter) !== -1
+                ) {
+                    product.classList.remove('jewelry-product-hidden');
+                } else {
+                    product.classList.add('jewelry-product-hidden');
+                }
+
+            });
+
+        });
+
+    });
+
+});
